@@ -52,7 +52,7 @@ def check_gitignore():
 
         # Use regex to check for exact matches
         secrets_match = re.search(r"^secrets\.env\s*$", content, re.MULTILINE)
-        temp_files_match = re.search(r"^temp_files/\s*$", content, re.MULTILINE)
+        temp_files_match = re.search(r"^temp_files\s*$", content, re.MULTILINE)
 
         return bool(secrets_match and temp_files_match)
 
